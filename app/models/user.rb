@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :user_steps
+  has_many :steps, through: :user_steps
+  has_many :private_steps, class_name: 'Step'
 
   validates :first_name, :last_name, presence: true
   validates :last_name, :first_name, length: { minimum: 3 }
