@@ -32,6 +32,10 @@ class StepsController < ApplicationController
   def destroy
   end
 
+  def personal_step
+    @steps = Step.where(personal: current_personal)
+  end
+
   private
 
   def set_step
@@ -39,6 +43,6 @@ class StepsController < ApplicationController
   end
 
   def step_params
-    params.require(:step).permit(:name, :description, :picture)
+    params.require(:step).permit(:name, :content)
   end
 end
