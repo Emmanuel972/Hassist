@@ -1,5 +1,5 @@
 class StepsController < ApplicationController
-
+  before_action :set_step, only: [:show, :edit, :update, :destroy]
   def index
     @steps = Step.all
   end
@@ -8,14 +8,14 @@ class StepsController < ApplicationController
   end
 
   def new
-    @Step = Step.new
+    @step = Step.new
   end
 
   def create
     @step = Step.new(step_params)
     @step.user = current_user
     if @step.save
-      redirect_to root_path
+      redirect_to steps_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -30,6 +30,8 @@ class StepsController < ApplicationController
   end
 
   def destroy
+    @step.destroy
+    redirect_to steps_path, status: :see_other
   end
 
   def personal_step
