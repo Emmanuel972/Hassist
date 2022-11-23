@@ -1,0 +1,8 @@
+.typed-cursor{
+  display: none;
+}
+
+.container li::marker {
+  content: '> ';
+  color: rgb(187, 174, 174);
+}
