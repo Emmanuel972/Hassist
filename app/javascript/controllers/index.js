@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import TypedController from "./typed_controller"
 application.register("typed", TypedController)
+
+import TypedencoreController from "./typedencore_controller"
+application.register("typedencore", TypedencoreController)

@@ -1,24 +1,26 @@
-<div class="container">
-  <h2>Se connecter</h2>
+<div class="bg">
+  <div class="container">
+    <h2 id='log' class="text-center" data-controller="typedencore"></h2>
 
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),  data: { turbo: "false" }) do |f| %>
-    <div class="form-inputs">
-      <%= f.input :email,
-                  label: "Adresse mail",
-                  required: false,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" } %>
-      <%= f.input :password,
-                  label: "Mot de passe",
-                  required: false,
-                  input_html: { autocomplete: "current-password" } %>
-      <%= f.input :remember_me, label: "se souvenir de moi" , as: :boolean if devise_mapping.rememberable? %>
-    </div>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),  data: { turbo: "false" }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    label: "Adresse mail",
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+        <%= f.input :password,
+                    label: "Mot de passe",
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, label: "se souvenir de moi" , as: :boolean if devise_mapping.rememberable? %>
+      </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Se connecter" %>
-    </div>
+      <div class="form-actions">
+        <%= f.button :submit, "Se connecter", id: 'btt', class:"btn btn-success m-2 pulse" %>
+      </div>
 
-  <%= render "devise/shared/links" %>
-  <% end %>
+    <%= render "devise/shared/links" %>
+    <% end %>
+  </div>
 </div>
