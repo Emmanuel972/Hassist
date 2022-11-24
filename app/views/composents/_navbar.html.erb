@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://res.cloudinary.com/daixhq5r5/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1669140921/logo_mqxmwq.jpg" %>
     <% end %>
 
@@ -10,7 +10,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
+        <% if user_signed_in? %>
           <li class="nav-item active">
             <%= link_to "Mes étapes", steps_path, class: "nav-link" %>
           </li>
@@ -18,21 +18,21 @@
             <%= link_to "Mes documents", "#", class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <p class="nav-link">  </p>
+            <p class="nav-link text-body fw-bold"><%= "#{current_user.last_name} #{current_user.first_name}" %></p>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://res.cloudinary.com/daixhq5r5/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1669141989/icons8-fl%C3%A8che-bas-30_2_w6yihb.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Mes étapes", "#", class: "nav-link" %>
               <%= link_to "Nouvelle étape", "#", class: "dropdown-item" %>
-              <%= link_to "Se déconnecté", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+              <%= link_to "Se déconnecter", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
