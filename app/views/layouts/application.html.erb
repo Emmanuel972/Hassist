@@ -12,8 +12,15 @@
 
   <body>
     <%= render "composents/navbar" %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <% if user_signed_in? %>
+      <div class="d-flex justify-content-between">
+        <%= render "composents/list_of_steps", steps: @steps %>
+        <div class="right-container">
+          <%= yield %>
+        </div>
+      </div>
+    <% else %>
+      <%= yield %>
+    <% end %>
   </body>
 </html>

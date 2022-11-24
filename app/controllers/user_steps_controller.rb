@@ -1,5 +1,6 @@
 class UserStepsController < ApplicationController
   before_action :set_user_steps, only: [:show, :edit, :update, :destroy]
+
   def index
     @user_steps = UserSteps.all
   end
@@ -8,6 +9,7 @@ class UserStepsController < ApplicationController
   end
 
   def new
+    @step = Step.find(params[:id])
     @user_steps = UserSteps.new
   end
 

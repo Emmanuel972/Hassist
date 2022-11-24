@@ -1,11 +1,11 @@
-<% @steps.each do |step| %>
+<div class="container">
   <div class="d-flex justify-content-center">
     <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-action activecard text-center" style="width: 18rem;" aria-current="true">
-      </a>
-        <%= link_to  step_path(step) do %>
-        <%= render "composents/step_card", step: step %>
-        <% end %>
+      <% @my_steps.each do |step| %>
+          <%= link_to  step_path(step) do %>
+          <%= render "composents/step_card", step: step %>
+          <% end %>
+      <% end %>
     </div>
   </div>
-<% end %>
+</div>
