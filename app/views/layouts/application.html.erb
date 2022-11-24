@@ -12,8 +12,11 @@
 
   <body>
     <%= render "composents/navbar" %>
+    <div class="d-flex justify-content-between">
+      <%= render "composents/list_of_steps", steps: @steps %>
+      <%= yield %>
+    </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
   </body>
 </html>
