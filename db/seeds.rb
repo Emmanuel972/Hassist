@@ -2,7 +2,7 @@ puts "Cleaning database..."
 Step.destroy_all
 
 puts "Creating steps..."
-20.times do
+10.times do
   step = Step.new(
     name:    Faker::Games::WorldOfWarcraft.hero,
     content: Faker::Games::WorldOfWarcraft.quote
