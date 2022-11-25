@@ -1,10 +1,6 @@
 class StepsController < ApplicationController
   before_action :set_step, only: [:show, :edit, :update, :destroy]
   before_action :set_user_steps, only: :show
-  def index
-
-  end
-
   def show
   end
 
@@ -16,7 +12,7 @@ class StepsController < ApplicationController
     @step = Step.new(step_params)
     @step.user = current_user
     if @step.save
-      redirect_to steps_path
+      redirect_to step_path(@step)
     else
       render :new, status: :unprocessable_entity
     end
@@ -46,7 +42,7 @@ class StepsController < ApplicationController
   end
 
   def step_params
-    params.require(:step).permit(:name, :content)
+    params.require(:step).permit(:name, :content, files: [])
   end
 
   def set_user_steps

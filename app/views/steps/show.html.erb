@@ -1,8 +1,17 @@
 <div class="row">
   <div class="col-9 p-3">
     <div class="bg-white p-3">
-      <h2 class="text-center mb-3 playfair"><%= @step.name %></h2>
+      <h5 class="text-center mb-3"><%= @step.name %></h5>
       <p class="card-text"><%= @step.content %></p>
+      <ul>
+        <% @step.files.each do |file| %>
+          <li>
+            <%= link_to cl_image_path(file.key), download: file.blob.filename.to_s do %>
+              <%= file.blob.filename.to_s %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
     </div>
   </div>
   <div class="col-3 user-steps-container">
