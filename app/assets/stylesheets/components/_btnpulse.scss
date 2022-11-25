@@ -1,5 +1,5 @@
 input.btn.btn.btn-success.m-2.pulse{
-  animation: pulse 2s infinite;
+  animation: pulse 1s infinite;
   color: #fff;
   font-weight: 600;
   &:hover{
@@ -19,7 +19,7 @@ input.btn.btn.btn-success.m-2.pulse{
 }
 @keyframes pulse {
   0% {
-    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    -moz-box-shadow: 0 0 0 0 rgba(184, 148, 20, 0.4);
     box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
   }
   70% {

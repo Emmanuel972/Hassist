@@ -1,5 +1,4 @@
-<%= simple_form_for [@step , @user_step] do |f| %>
-  <%= f.input :file, as: :file %>
-  <%= f.input :done %>
+<%= simple_form_for (@step , @user_step) do |f| %>
+  <%= f.input :file, label: "dossier" %>
   <%= f.submit %>
 <% end %>

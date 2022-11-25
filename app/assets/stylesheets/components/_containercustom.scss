@@ -1,19 +1,18 @@
-.bg{
+.form-step-container {
   background-color: #845b8770;
-  padding-top: 50px;
-  margin-left: 30%;
-  margin-right: 30%;
-  padding: 50px;
-  margin-top: 50px;
-  border-radius: 5px;
+  padding: 4rem;
+  border-radius: 0.5rem;
+  .form-step {
+    min-width: 20rem;
+  }
 }
 
-#log{
+#log {
   font-family: cinzel;
   padding-bottom: 20px;
 }
 
-#btt{
+#btt {
   background-color: #6B88D3!important;
   border: 0px solid transparent;
 }
