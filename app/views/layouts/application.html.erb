@@ -13,9 +13,9 @@
   <body>
     <%= render "composents/navbar" %>
     <% if user_signed_in? %>
-      <div class="d-flex justify-content-between">
+      <div class="d-flex">
         <%= render "composents/list_of_steps", steps: @steps %>
-        <div class="right-container">
+        <div class="p-4 flex-grow-1">
           <%= yield %>
         </div>
       </div>

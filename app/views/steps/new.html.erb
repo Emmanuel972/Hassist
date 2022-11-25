@@ -1,8 +1,10 @@
-<div class="container">
-<h2 class="text-center">Créer une étape</h2>
-  <%= simple_form_for(@step) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :content %>
-    <%= f.submit %>
-  <% end %>
+<div class="d-flex justify-content-center align-items-center">
+  <div class="form-step-container">
+    <h2 class="text-center">Créer une étape</h2>
+    <%= simple_form_for(@step, html: { class: 'form-step' }) do |f| %>
+      <%= f.input :name, label: "Nom de l'étape" %>
+      <%= f.input :content, label: "contenu"  %>
+      <%= f.submit "Créer une étape", id: 'btt', class: "btn btn-success m-2 pulse" %>
+    <% end %>
+  </div>
 </div>
