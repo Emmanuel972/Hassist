@@ -1,0 +1,17 @@
+<div class="card-user-step">
+  <p><%= l(user_step.created_at, format: "%e %b %Y", locale: 'en') %></p>
+  <ul>
+    <% user_step.files.each do |file| %>
+      <li>
+        <%#= link_to file.url, download: file.key do %>
+        <a href="<%= file.key %>" download>
+          <%= file.blob.filename.to_s %>
+        <%# end %>
+      </li>
+    <% end %>
+  </ul>
+  <%= simple_form_for(user_step) do |f| %>
+    <%= f.input :files, as: :file, input_html: { multiple: true } %>
+    <%= f.submit 'Sauvegarder' %>
+  <% end %>
+</div>

@@ -1,0 +1,41 @@
+#right {
+  position: absolute;
+  width: 30vw;
+  right: 0px;
+}
+
+#left {
+  position: absolute;
+  width: 30vw;
+  left: 0px;
+}
+
+#center{
+  position: absolute;
+  right: 0;
+}
+
+#no-absolut {
+  position: initial;
+}
+
+.user-steps-container {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 0.75rem;
+  background-color: white;
+  margin: 0 !important;
+  padding: 0.5rem !important;
+}
+
+.card-user-step {
+  width: 100%;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 0.5rem;
+  min-height: 7rem;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+}
+
+.playfair {
+  font-family: 'Playfair Display', serif;
+}
