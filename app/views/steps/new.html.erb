@@ -1,8 +1,9 @@
 <div class="container">
-<h2 class="text-center">Créer une étape</h2>
+  <h2 class="text-center">Créer une étape</h2>
   <%= simple_form_for(@step) do |f| %>
     <%= f.input :name %>
     <%= f.input :content %>
-    <%= f.submit %>
+    <%= f.input :files, as: :file, input_html: { multiple: true } %>
+    <%= f.submit 'Sauvegarder' %>
   <% end %>
 </div>
