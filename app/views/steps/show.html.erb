@@ -1,7 +1,9 @@
 <div class="row">
-  <div class="col-9">
-    <h5 class="text-center mb-3"><%= @step.name %></h5>
-    <p class="card-text"><%= @step.content %></p>
+  <div class="col-9 p-3">
+    <div class="bg-white p-3">
+      <h2 class="text-center mb-3 playfair"><%= @step.name %></h2>
+      <p class="card-text"><%= @step.content %></p>
+    </div>
   </div>
   <div class="col-3 user-steps-container">
     <%= link_to step_user_steps_path(@step), data: { turbo_method: :post, turbo_confirm: "Voulez créer un sauvegarde pour #{@step.name}?" }, class: 'card-user-step card-user-step d-flex justify-content-center align-items-center' do %>
