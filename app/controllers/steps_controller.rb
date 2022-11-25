@@ -1,8 +1,8 @@
 class StepsController < ApplicationController
   before_action :set_step, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_user_steps, only: :show
   def index
-    
+
   end
 
   def show
@@ -47,5 +47,9 @@ class StepsController < ApplicationController
 
   def step_params
     params.require(:step).permit(:name, :content)
+  end
+
+  def set_user_steps
+    @user_steps = UserStep.where(user: current_user, step: @step).order(created_at: :desc)
   end
 end
