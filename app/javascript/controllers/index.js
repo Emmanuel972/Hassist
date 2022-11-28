@@ -16,3 +16,6 @@ application.register("typedencore", TypedencoreController)
 
 import Reveal from 'stimulus-reveal-controller'
 application.register('reveal', Reveal)
+
+import Popover from 'stimulus-popover'
+application.register('popover', Popover)

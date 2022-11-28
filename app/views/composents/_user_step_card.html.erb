@@ -13,7 +13,7 @@
     <% end %>
   </ul>
   <% if user_step.files.attached? %>
-    <%= link_to "Delete", user_step_path(user_step), data: { turbo_method: :delete, turbo_confirm: "Voulez vous vraiment supprimer ?" } %>
+    <%= link_to "Supprimer", user_step_path(user_step), data: { turbo_method: :delete, turbo_confirm: "Voulez vous vraiment supprimer ?" } %>
   <% else %>
     <%= simple_form_for(user_step) do |f| %>
       <%= f.input :files, as: :file, input_html: { multiple: true } %>
