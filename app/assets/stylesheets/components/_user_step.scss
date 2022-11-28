@@ -39,3 +39,21 @@
 .playfair {
   font-family: 'Playfair Display', serif;
 }
+
+.step-card-link {
+  color: rgb(122, 115, 115);
+}
+
+.list-group-item.list-group-item-action.activecard.text-center:active {
+  background-color: #f4f4f4!important;
+  border-right: 6px solid #4dbcd6;
+}
+
+.list-group-item.list-group-item-action.activecard.text-center:hover {
+  background-color: #f4f4f4!important;
+  border-right: 6px solid #4dbcd6;
+}
+
+.list-group-item.list-group-item-action.activecard.text-center:hover > a {
+  color: black!important;
+}
