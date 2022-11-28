@@ -3,15 +3,21 @@
   <ul>
     <% user_step.files.each do |file| %>
       <li>
-        <%#= link_to file.url, download: file.key do %>
-        <a href="<%= file.key %>" download>
-          <%= file.blob.filename.to_s %>
-        <%# end %>
+        <iframe src=<%= "https://docs.google.com/gview?url=#{file.url}&embedded=true" %>></iframe>
+      </li>
+      <li>
+        <%= link_to cl_image_path(file.key), target: "_blank", download: file.blob.filename.to_s do %>
+              <%= file.blob.filename.to_s %>
+            <% end %>
       </li>
     <% end %>
   </ul>
-  <%= simple_form_for(user_step) do |f| %>
-    <%= f.input :files, as: :file, input_html: { multiple: true } %>
-    <%= f.submit 'Sauvegarder' %>
+  <% if user_step.files.attached? %>
+    <%= link_to "Delete", user_step_path(user_step), data: { turbo_method: :delete, turbo_confirm: "Voulez vous vraiment supprimer ?" } %>
+  <% else %>
+    <%= simple_form_for(user_step) do |f| %>
+      <%= f.input :files, as: :file, input_html: { multiple: true } %>
+      <%= f.submit 'Sauvegarder' %>
+    <% end %>
   <% end %>
 </div>

@@ -17,6 +17,6 @@ class ApplicationController < ActionController::Base
   end
 
   def set_my_steps
-    @my_steps = Step.privately_available
+    @my_steps = Step.privately_available.where(user: current_user)
   end
 end

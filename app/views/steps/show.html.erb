@@ -1,12 +1,18 @@
 <div class="row">
   <div class="col-9 p-3">
     <div class="bg-white p-3">
+      <% if @step.user == current_user %>
+        <%= link_to "Supprimer", step_path(@step), data: { turbo_method: :delete, turbo_confirm: "Voulez vous vraiment supprimer #{@step.name}?" } %>
+      <% end %>
       <h2 class="text-center mb-3"><%= @step.name %></h2>
       <p class="card-text"><%= @step.content %></p>
       <ul>
         <% @step.files.each do |file| %>
           <li>
-            <%= link_to cl_image_path(file.key), download: file.blob.filename.to_s do %>
+            <iframe src=<%= "https://docs.google.com/gview?url=#{file.url}&embedded=true" %>></iframe>
+          </li>
+          <li>
+            <%= link_to cl_image_path(file.key), target: "_blank", download: file.blob.filename.to_s do %>
               <%= file.blob.filename.to_s %>
             <% end %>
           </li>

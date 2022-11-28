@@ -1,12 +1,5 @@
 class UserStepsController < ApplicationController
   before_action :set_user_step, only: %i[show edit update destroy]
-  def index
-    @user_steps = UserSteps.all
-  end
-
-  def show
-  end
-
   def new
     @step = Step.find(params[:step_id])
     @user_step = UserStep.new
@@ -29,15 +22,19 @@ class UserStepsController < ApplicationController
 
   def update
     if @user_step.update(user_step_params)
-      redirect_to step_path(@user_step.step), notice: 'Ca a fonctionné'
+      redirect_to step_path(@user_step.step)
     else
       redirect_to step_path(@user_step.step), alert: "Ca n'a pas fonctionné: #{@user_step.errors.full_messages.join(', ')}"
     end
   end
 
   def destroy
-    @user_step.destroy
-    redirect_to user_steps_path, status: :see_other
+    @step = @user_step.step
+    if @user_step.destroy
+      redirect_to step_path(@step), status: :see_other
+    else
+      redirect_to step_path(@user_step.step)
+    end
   end
 
   private

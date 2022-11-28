@@ -5,9 +5,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
-  resources :steps, only: [:show, :new, :create] do
+  resources :steps, only: [:show, :new, :create, :destroy] do
     resources :user_steps, only: :create
   end
-  resources :user_steps, only: :update
+  resources :user_steps, only: [:update, :destroy]
+  # delete 'user_steps/:id' => 'user_steps#destroy', as: 'delete_user_step'
 end
