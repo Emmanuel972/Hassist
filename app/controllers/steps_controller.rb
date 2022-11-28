@@ -28,7 +28,7 @@ class StepsController < ApplicationController
 
   def destroy
     @step.destroy
-    redirect_to steps_path, status: :see_other
+    redirect_to root_path, status: :see_other
   end
 
   def personal_step
