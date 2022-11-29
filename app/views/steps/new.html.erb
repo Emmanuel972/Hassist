@@ -1,10 +1,10 @@
-<div class="d-flex justify-content-center align-items-center">
+<div class="d-flex justify-content-center align-items-center mt-5">
   <div class="form-step-container">
     <h2 class="text-center">Créer une étape</h2>
     <%= simple_form_for(@step, html: { class: 'form-step' }) do |f| %>
       <%= f.input :name, label: "Nom de l'étape" %>
       <%= f.input :content, label: "contenu"  %>
-      <%= f.input :files, as: :file, input_html: { multiple: true } %>
+      <%= f.input :files, label: "Fichiers", as: :file, input_html: { multiple: true } %>
       <%= f.submit "Créer une étape", id: 'btt', class: "btn btn-success m-2 pulse" %>
     <% end %>
   </div>

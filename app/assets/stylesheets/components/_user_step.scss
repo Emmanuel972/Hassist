@@ -65,3 +65,13 @@ i.fa-solid.fa-plus:hover {
 .list-group-item.list-group-item-action.activecard.text-center:hover > a {
   color: black!important;
 }
+
+.step-cards {
+  display: flex;
+  .step-card-left {
+    flex: 1 1 50%;
+  }
+  .step-card-right {
+    flex: 0 0 300px;
+  }
+}

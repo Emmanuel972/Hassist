@@ -4,7 +4,8 @@
       <h1 style="margin-left: 41%; margin-right: 15%;">Hassist</h1>
       <p data-controller="typed"></p>
       <% unless user_signed_in? %>
-      <%= link_to "S'inscrire", new_user_registration_path, class: "btn btn-gradient" %>
+      <%= link_to "S'inscrire", new_user_registration_path, class: "btn btn-gradient mx-3" %>
+      <%= link_to "Se connecter", new_user_session_path, class: "btn btn-gradient mx-3" %>
       <% end %>
     </div>
   </div>
