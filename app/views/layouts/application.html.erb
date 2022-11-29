@@ -14,13 +14,27 @@
     <%= render "composents/navbar" %>
     <% if user_signed_in? %>
       <div class="d-flex">
+      <div class="list-width">
         <%= render "composents/list_of_steps", steps: @steps %>
-        <div class="p-4 flex-grow-1">
+      </div>
+        <div class="p-4 flex-grow-1" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgb(244 244 244 / 10%)), url(https://res.cloudinary.com/dikisdh8l/image/upload/v1669299620/Page_d_accueil_Hassist_gukj6k.jpg);">
           <%= yield %>
         </div>
       </div>
     <% else %>
       <%= yield %>
     <% end %>
+    <div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
   </body>
 </html>

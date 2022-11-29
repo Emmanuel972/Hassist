@@ -1,23 +1,30 @@
 <div class="card-user-step">
-  <p><%= l(user_step.created_at, format: "%e %b %Y", locale: 'en') %></p>
-  <ul>
+  <div class="d-flex justify-content-between">
+    <p><%= l(user_step.created_at, format: "%e %b %Y", locale: 'en') %></p>
+    <% if user_step.files.attached? %>
+      <%= link_to user_step_path(user_step), data: { turbo_method: :delete, turbo_confirm: "Voulez vous vraiment supprimer ?" } do%>
+        <i class="fa fa-trash-can text-secondary"></i>
+      <%end %>
+    <% end %>
+  </div>
+  <ul class="list-group list-group-flush">
     <% user_step.files.each do |file| %>
-      <li>
+      <li class="list-group-item">
         <iframe src=<%= "https://docs.google.com/gview?url=#{file.url}&embedded=true" %>></iframe>
       </li>
-      <li>
-        <%= link_to cl_image_path(file.key), target: "_blank", download: file.blob.filename.to_s do %>
-              <%= file.blob.filename.to_s %>
-            <% end %>
+      <li class="list-group-item">
+        <%= link_to file.url, target: "_blank", class: "text-secondary", download: file.blob.filename.to_s do %>
+          <%= file.blob.filename.to_s %>
+        <% end %>
       </li>
     <% end %>
   </ul>
-  <% if user_step.files.attached? %>
-    <%= link_to "Supprimer", user_step_path(user_step), data: { turbo_method: :delete, turbo_confirm: "Voulez vous vraiment supprimer ?" } %>
-  <% else %>
+  <% unless user_step.files.attached? %>
     <%= simple_form_for(user_step) do |f| %>
-      <%= f.input :files, as: :file, input_html: { multiple: true } %>
-      <%= f.submit 'Sauvegarder' %>
+      <%= f.input :files, label: "Fichiers", as: :file, input_html: { multiple: true } %>
+      <div class="d-flex justify-content-center">
+        <%= f.submit 'Sauvegarder', class: "btn btn-gradient" %>
+      </div>
     <% end %>
   <% end %>
 </div>

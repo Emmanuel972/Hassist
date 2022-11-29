@@ -1,18 +1,20 @@
-<div class="list-group list-width">
+<div class="list-group">
   <% steps.each do |step| %>
     <div class="list-group-item list-group-item-action activecard text-center">
       <%= render "composents/step_card", step: step %>
     </div>
   <% end %>
-  <div class="list-group-item list-group-item-action activecard text-center btn" data-controller="reveal" data-reveal-hidden-class="d-none">
-    <p data-action="click->reveal#toggle">Mes étapes</p>
-
-    <div class="list-group-item list-group-item-action activecard text-center d-none mt-4" data-reveal-target="item"><%= link_to "Créer une étape", new_step_path %>
-      <% @my_steps.each do |step| %>
-        <%= link_to  step_path(step) do %>
-          <li data-reveal-target="item" class="d-none mt-4"><%= render "composents/step_card", step: step %></li>
-        <% end %>
-      <% end %>
-    </div>
+</div>
+<div class="list-group" data-controller="reveal" data-reveal-hidden-class="d-none">
+  <div class="list-group-item list-group-item-action activecard text-center" data-action="click->reveal#toggle">
+    Mes étapes
   </div>
+    <div class="list-group-item list-group-item-action activecard text-center" data-reveal-target="item">
+      <%= link_to "Créer une étape", new_step_path, class: 'step-card-link bcc' %>
+    </div>
+    <% @my_steps.each do |step| %>
+      <div class="list-group-item list-group-item-action activecard text-center" data-reveal-target="item">
+        <%= render "composents/step_card", step: step %>
+      </div>
+    <% end %>
 </div>
