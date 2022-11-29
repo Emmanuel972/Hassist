@@ -20,10 +20,15 @@
       </ul>
     </div>
   </div>
-  <div class="col-3 user-steps-container">
-    <%= link_to step_user_steps_path(@step), data: { turbo_method: :post, turbo_confirm: "Voulez créer un sauvegarde pour #{@step.name}?" }, class: 'card-user-step card-user-step d-flex justify-content-center align-items-center' do %>
+  <div class="col-3 user-steps-container" data-controller="popover">
+    <%= link_to step_user_steps_path(@step), data: { action: "mouseenter->popover#show mouseleave->popover#hide", turbo_method: :post, turbo_confirm: "Voulez créer un sauvegarde pour #{@step.name}?" }, class: 'card-user-step card-user-step d-flex justify-content-center align-items-center' do %>
       <i class="fa-solid fa-plus"></i>
     <% end %>
+    <template data-popover-target="content">
+      <div data-popover-target="card" class ="card shadow rounded p-3 bg-light text-body">
+        <p>Créer une sauvegarde</p>
+      </div>
+    </template>
     <% @user_steps.each do |user_step| %>
       <%= render 'composents/user_step_card', user_step: user_step %>
     <% end %>
