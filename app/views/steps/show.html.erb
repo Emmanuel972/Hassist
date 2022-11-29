@@ -1,6 +1,6 @@
 <div class="step-cards">
   <div class="step-card-left p-3">
-    <div class="bg-white p-3">
+    <div class="bg-white p-3 opacity-75">
       <% if @step.user == current_user %>
       <div class="d-flex justify-content-end">
         <%= link_to step_path(@step), data: { turbo_method: :delete, turbo_confirm: "Voulez vous vraiment supprimer #{@step.name}?" } do %>
