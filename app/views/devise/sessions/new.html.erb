@@ -1,3 +1,5 @@
+<div class="container">
+<div class="d-flex justify-content-center mt-5">
 <div class="form-step-container">
   <div class="container">
     <h2 id='log' class="text-center" data-controller="typedencore"></h2>
@@ -13,13 +15,19 @@
                     label: "Mot de passe",
                     required: false,
                     input_html: { autocomplete: "current-password" } %>
+<<<<<<< HEAD
+=======
+
+>>>>>>> b3a6fdb (fixe form)
       </div>
 
-      <div class="form-actions">
+      <div class="form-actions d-flex justify-content-center">
         <%= f.button :submit, "Se connecter", id: 'btt', class:"btn btn-success m-2 pulse" %>
       </div>
 
-    <%= render "devise/shared/links" %>
+
     <% end %>
   </div>
+</div>
+</div>
 </div>
