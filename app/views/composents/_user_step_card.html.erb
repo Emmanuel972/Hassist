@@ -7,8 +7,8 @@
       </li>
       <li>
         <%= link_to cl_image_path(file.key), target: "_blank", download: file.blob.filename.to_s do %>
-              <%= file.blob.filename.to_s %>
-            <% end %>
+          <%= file.blob.filename.to_s %>
+        <% end %>
       </li>
     <% end %>
   </ul>
