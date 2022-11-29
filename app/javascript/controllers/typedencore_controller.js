@@ -6,7 +6,7 @@ export default class extends Controller {
   connect() {
     new Typed(this.element, {
       strings: ["Se connecter"],
-      typeSpeed: 50,
+      typeSpeed: 100000000,
       loop: true
     })
   }
