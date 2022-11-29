@@ -23,16 +23,10 @@ a {
   color: rgb(253, 251, 251);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   margin-top: 80px;
+  height: 100px;
 }
 
-.btn-gradient {
-  color: rgb(2, 2, 2);
-  padding: 8px 24px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: linear-gradient(#ffc65a, #4dbcd6);
-  border: 1px solid #0e0000;
-}
+
 
 .btn-gradient:hover {
   background: linear-gradient(#fbfcfd, #fafbfc);
@@ -45,5 +39,3 @@ a {
   padding-top: 4%;
   background-color: rgb(246,246,246);
 }
-
-

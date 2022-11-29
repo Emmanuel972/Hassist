@@ -14,7 +14,9 @@
     <%= render "composents/navbar" %>
     <% if user_signed_in? %>
       <div class="d-flex">
+      <div class="list-width">
         <%= render "composents/list_of_steps", steps: @steps %>
+      </div>
         <div class="p-4 flex-grow-1">
           <%= yield %>
         </div>
