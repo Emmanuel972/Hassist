@@ -19,18 +19,33 @@
         </div>
       <% end %>
       <p class="card-text p-3"><%= @step.content.html_safe %></p>
-      <ul>
-        <% @step.files.each do |file| %>
-          <li>
-            <iframe src=<%= "https://docs.google.com/gview?url=#{file.url}&embedded=true" %>></iframe>
-          </li>
-          <li>
-            <%= link_to cl_image_path(file.key), target: "_blank", download: file.blob.filename.to_s do %>
-              <%= file.blob.filename.to_s %>
-            <% end %>
-          </li>
-        <% end %>
-      </ul>
+      <% if @step.files.attached? %>
+        <ul class="list-group">
+          <% @step.files.each do |file| %>
+            <li class="list-group-item">
+              <iframe src=<%= "https://docs.google.com/gview?url=#{file.url}&embedded=true" %>></iframe>
+            </li>
+            <li class="list-group-item">
+              <%= link_to cl_image_path(file.key), target: "_blank", download: file.blob.filename.to_s do %>
+                <%= file.blob.filename.to_s %>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      <% elsif @step.url_files.present? %>
+      <ul class="list-group">
+          <% @step.url_files.each do |file| %>
+            <li class="list-group-item">
+              <iframe src=<%= "https://docs.google.com/gview?url=#{file[:url]}&embedded=true" %>></iframe>
+            </li>
+            <li class="list-group-item">
+              <%= link_to cl_image_path(file[:key]), target: "_blank" do %>
+                <%= file[:name] %>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
     </div>
   </div>
   <div class="step-card-right user-steps-container rounded-4" data-controller="popover">
