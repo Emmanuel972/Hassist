@@ -28,12 +28,20 @@
 }
 
 .card-user-step {
+  color: black;
   width: 100%;
   border: 1px solid rgb(211, 211, 211);
   border-radius: 0.5rem;
   min-height: 7rem;
   margin-bottom: 0.75rem;
   padding: 0.75rem;
+
+}
+i.fa-solid.fa-plus:hover {
+  color: rgb(255, 0, 0);
+}
+.card-user-step:hover {
+  color: black!important;
 }
 
 .playfair {
@@ -56,4 +64,14 @@
 
 .list-group-item.list-group-item-action.activecard.text-center:hover > a {
   color: black!important;
+}
+
+.step-cards {
+  display: flex;
+  .step-card-left {
+    flex: 1 1 50%;
+  }
+  .step-card-right {
+    flex: 0 0 300px;
+  }
 }

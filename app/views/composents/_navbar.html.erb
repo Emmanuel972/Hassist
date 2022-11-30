@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://res.cloudinary.com/daixhq5r5/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1669140921/logo_mqxmwq.jpg" %>
@@ -17,9 +17,6 @@
         <p class="alert"><%= alert %></p>
       </li>
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Mes documents", "#", class: "nav-link" %>
-          </li>
           <li class="nav-item active">
             <p class="lilita nav-link text-body fw-bold"><%= "#{current_user.last_name} #{current_user.first_name}" %></p>
           </li>
