@@ -23,7 +23,7 @@
           <li class="nav-item dropdown">
             <%= image_tag "https://res.cloudinary.com/daixhq5r5/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1669141989/icons8-fl%C3%A8che-bas-30_2_w6yihb.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Mes étapes", "#", class: "nav-link" %>
+              <%= link_to "Mes étapes", "#", class: "dropdown-item" %>
               <%= link_to "Nouvelle étape", "#", class: "dropdown-item" %>
               <%= link_to "Se déconnecter", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>

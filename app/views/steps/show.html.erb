@@ -8,8 +8,8 @@
         <% end %>
       </div>
       <% end %>
-      <h2 class="text-center mb-3"><%= @step.name %></h2>
-      <p class="card-text"><%= @step.content.html_safe %></p>
+      <h1 class="text-center mb-3"><%= @step.name %></h1>
+      <h5 class="card-text"><%= @step.content.html_safe %></h5>
       <ul>
         <% @step.files.each do |file| %>
           <li>
