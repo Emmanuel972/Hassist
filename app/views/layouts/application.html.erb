@@ -17,9 +17,9 @@
       <div class="list-width">
         <%= render "composents/list_of_steps", steps: @steps %>
       </div>
-
-        <%= yield %>
-
+        <div class="p-4 flex-grow-1">
+          <%= yield %>
+        </div>
       </div>
     <% else %>
       <%= yield %>

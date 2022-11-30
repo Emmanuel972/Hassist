@@ -21,7 +21,13 @@
             <p class="lilita nav-link text-body fw-bold"><%= "#{current_user.last_name} #{current_user.first_name}" %></p>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://res.cloudinary.com/daixhq5r5/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1669141989/icons8-fl%C3%A8che-bas-30_2_w6yihb.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% if current_user.avatar.attached? %>
+              <%= cl_image_tag current_user.avatar.key, class: "avatar dropdown-toggle", id: "navbarDropdown", role: "button", data: { toggle: "dropdown" }, alt: "avatar" %>
+            <% elsif current_user.photo.nil? == false %>
+              <img src="<%= current_user.photo %>" alt="" class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"%>
+            <% else %>
+              <%= image_tag "https://res.cloudinary.com/daixhq5r5/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1669141989/icons8-fl%C3%A8che-bas-30_2_w6yihb.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Mes étapes", "#", class: "dropdown-item" %>
               <%= link_to "Nouvelle étape", "#", class: "dropdown-item" %>

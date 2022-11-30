@@ -21,7 +21,6 @@
 
 .user-steps-container {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border-radius: 0.75rem;
   background-color: white;
   margin: 0 !important;
   padding: 0.5rem !important;
@@ -74,4 +73,14 @@ i.fa-solid.fa-plus:hover {
   .step-card-right {
     flex: 0 0 300px;
   }
+}
+
+.scrollable {
+  overflow-y: scroll;
+  width: 300px;
+  height: 150px;
+}
+
+.scrollable img {
+  width: 100%;
 }
