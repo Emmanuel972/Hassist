@@ -11,7 +11,7 @@ class UserStepsController < ApplicationController
     @user_step.step = @step
     @user_step.user = current_user
     if @user_step.save
-      redirect_to step_path(@step), notice: 'Ca a fonctionné'
+      redirect_to step_path(@step)
     else
       redirect_to step_path(@step), alert: "Ca n'a pas fonctionné: #{@user_step.errors.full_messages.join(', ')}"
     end

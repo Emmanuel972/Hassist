@@ -143,7 +143,7 @@ psychomotricienne = {name: "PSYCHOMOTRICIENNE", content: "<p class='p-3'>
     <p class='card-text'>12 Rue Ath Montlouis Félicité, Fort de France 97200, Martinique</p>
     <p class='card-text text-end fw-bold'>+596 596 61 47 08</p>
   </div>
-</div>", picture: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669821772/psychomotricienne.jpg1_rvqxpj.jpg"}
+</div>", picture: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669901808/development/capture__2__uafuux.png"}
 
   [professionnels_de_la_petite_enfance, camps, mdph, sessad, orthophoniste, psychomotricienne].each do |attributes|
     step = Step.create!(attributes)
