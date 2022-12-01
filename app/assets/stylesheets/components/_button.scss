@@ -3,6 +3,25 @@
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient(#ffc65a, #4dbcd6);
+  background: linear-gradient(#82abb5,#82abb5);
   border: 1px solid #0e0000;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#fbfcfd, #fafbfc);
+  color: rgb(130,171,180);
+}
+
+.btn-gradient2 {
+  color: rgb(2, 2, 2);
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#b16a5b,#b16a5b);
+  border: 1px solid #0e0000;
+}
+
+.btn-gradient2:hover {
+  background: linear-gradient(#fbfcfd, #fafbfc);
+  color: rgb(177,106,91);
 }
