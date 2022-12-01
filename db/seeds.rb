@@ -8,26 +8,25 @@ puts "Creating users..."
 
 emmanuel = {first_name: "Emmanuel", last_name: "CLAIRE", email:"c.l.e.972@gmail.com", password: "33845972", photo: "https://res.cloudinary.com/daixhq5r5/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1669751712/development/2zdm4bfojob5mo9oknfny8isnjh2.jpg"}
 teacher = {first_name: "teacher", last_name: "LEWAGON", email:"test@test.com", password: "123456", photo: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" }
-random = {first_name: "User", last_name: "NEW", email:"random@test.com", password: "123456", photo: "https://res.cloudinary.com/daixhq5r5/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1669751712/development/2zdm4bfojob5mo9oknfny8isnjh2.jpg"}
+random = {first_name: "User", last_name: "NEW", email:"random@test.com", password: "123456", photo: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669917164/development/neblife_c309b25d8c30c03e5caafb00d424395c_cropped_lm1tsz.png"}
 
 [emmanuel, teacher, random].each do |attributes|
   user = User.new(attributes)
   puts "Created #{user.first_name}"
-  user.avatar.attached("wxni7zfq5gpj48smlzxzgdntccd4")
   user.save
 end
 puts 'users Finished!'
 
 puts "Creating steps..."
 
-professionnels_de_la_petite_enfance = {name: "Professionnels De La Petite Enfance", content: "<p class='p-3'>
+professionnels_de_la_petite_enfance = { name: "Professionnels De La Petite Enfance", content: "<p class='p-3'>
   Les professionnels de la petite-enfance peuvent également être les premiers interlocuteurs dans le cadre d’un dépistage précoce et accompagner les parents vers les démarches nécessaires. Ces professionnels peuvent être pédiatre, professionnels de la Protection Maternelle et Infantile (PMI), professionnel d’une structure d’accueil de la petite enfance (crèche, multi-accueil, halte-garderie, périscolaire, enseignants en classe de maternelle…).
 </p>
 <p class='p-3'>
   Les tests les plus couramment utilisés pour le dépistage de l’autisme dans la petite enfance sont le CHecklist for Autism in Toddlers (CHAT, Baron Cohen et all, 1996) et le Modified CHecklist for Autism in Toddlers (M-CHAT, Robins, Fein, Barton and Green, 2001), la Children Autism Rating Scale (CARS, Eric Schopler, 1971).
 </p>
-", picture: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669821795/personnel_de_la_petite_enfance_2_drwygu.jpg"}
-camps = {name: "CAMPS", content: "<p class='p-3'>
+", picture: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669821795/personnel_de_la_petite_enfance_2_drwygu.jpg" }
+camps = { name: "CAMPS", content: "<p class='p-3'>
   le CAMPS(Centre Medico Social Précose) a pour mission le dépistage, le diagnostique, le traitement et la réeducation des jeunes enfants entre 0 et 6ans en situation d'handicap avant leur rentrée a l'école.
 </p>
 <p class='p-3'>
@@ -43,8 +42,8 @@ camps = {name: "CAMPS", content: "<p class='p-3'>
     <p class='card-text text-end fw-bold'>+596 596 58 18 39</p>
   </div>
 </div>
-", picture: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669821197/doc_wxwj7d.png"}
-mdph = {name: "MDPH", content: "<p class='p-3'>
+", picture: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669821197/doc_wxwj7d.png" }
+mdph = { name: "MDPH", content: "<p class='p-3'>
   Une MDPH a une mission d'accueil, d'information, d'accompagnement et de conseil des personnes handicapées et de leur famille, ainsi que de sensibilisation des citoyens au handicap.
 </p>
 <p class='p-3'>
@@ -61,7 +60,7 @@ mdph = {name: "MDPH", content: "<p class='p-3'>
   </div>
 </div>
 " }
-sessad = {name: "SESSAD", content: "<p class='p-3'>
+sessad = { name: "SESSAD", content: "<p class='p-3'>
   Le Sessad apporte un soutien spécialisé en développant des actions de soins et de rééducation dans les lieux de vie de l'élève en situation de handicap
 </p>
 <p class='p-3'>
@@ -87,7 +86,7 @@ sessad = {name: "SESSAD", content: "<p class='p-3'>
     <p class='card-text text-end fw-bold'>+596 596 69 64 98</p>
   </div>
 </div>
-", picture: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669821588/MDPH_symbfx.jpg"}
+", picture: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669916509/development/que-fait-lorthophoniste-avec-un-enfant-non-verbal-vignette-691x389_uoc30t.jpg" }
 orthophoniste = {name: "ORTHOPHONISTE ", content: "<p class='p-3'>
   Les orthophonistes font partie intégrante d’une équipe de services en autisme Les problèmes de communication sociale sont caractéristiques du trouble du spectre de l’autisme (TSA), et les orthophonistes sont des professionnels cliniques spécialisés dans tous les aspects de la communication.
 </p>
@@ -117,8 +116,8 @@ orthophoniste = {name: "ORTHOPHONISTE ", content: "<p class='p-3'>
     <p class='card-text text-end fw-bold'>+596 596 51 44 34</p>
   </div>
 </div>
-", picture: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669813660/orthophoniste_b4gjcs.jpg"}
-psychomotricienne = {name: "PSYCHOMOTRICIENNE", content: "<p class='p-3'>
+", picture: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669813660/orthophoniste_b4gjcs.jpg" }
+psychomotricienne = { name: "PSYCHOMOTRICIENNE", content: "<p class='p-3'>
   Les enfants et adultes autistes peuvent présenter des troubles psychomoteurs et sensori-moteurs dès leur plus jeune âge. Ces difficultés nécessitent des interventions rééducatives et réadaptatives. Les plus courantes sont les interventions en psychomotricité rééducative et en ergothérapie.
 </p>
 <p class='p-3'>
@@ -150,9 +149,9 @@ psychomotricienne = {name: "PSYCHOMOTRICIENNE", content: "<p class='p-3'>
     puts "Created #{step.name}"
 end
 
-ecole = {name: "Inscription maternelle", content: "Inscription a la maternelle École La Volière", user_id: 1}
-medecin = {name: "Dr. Salami", content: "Suivi médical", user_id: 3}
-psycho = {name: "psychologue", content: "Suivi des entretiens", user_id: 3}
+ecole = { name: "Inscription maternelle", content: "Inscription a la maternelle École La Volière", user_id: 1 }
+medecin = { name: "Dr. Salami", content: "Suivi médical", user_id: 3 }
+psycho = { name: "psychologue", content: "Suivi des entretiens", user_id: 3 }
 
 [ecole, medecin, psycho].each do |attributes|
   step = Step.create!(attributes)
