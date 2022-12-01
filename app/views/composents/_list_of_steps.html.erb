@@ -11,12 +11,12 @@
   <div class="list-group-item list-group-item-action activecard text-center" data-action="click->reveal#toggle">
     Mes étapes
   </div>
-    <div class="list-group-item list-group-item-action activecard text-center" data-reveal-target="item">
+    <div class="list-group-item list-group-item-action activecard text-center d-none" data-reveal-target="item">
       <%= link_to "Créer une étape", new_step_path, class: 'step-card-link bcc' %>
     </div>
     <% @my_steps.each do |step| %>
       <%= link_to step_path(step) do %>
-        <div class="list-group-item list-group-item-action activecard text-center step-card-link bcc">
+        <div class="list-group-item list-group-item-action activecard text-center step-card-link bcc d-none" data-reveal-target="item">
           <%= step.name %>
         </div>
       <% end %>
