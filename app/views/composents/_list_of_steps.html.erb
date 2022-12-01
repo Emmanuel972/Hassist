@@ -1,19 +1,19 @@
 <div class="list-group">
   <% steps.each do |step| %>
-    <div class="list-group-item list-group-item-action activecard text-center">
+    <div class="list-group-item list-group-item-action activecard text-center text-color2">
       <%= render "composents/step_card", step: step %>
     </div>
   <% end %>
 </div>
 <div class="list-group" data-controller="reveal" data-reveal-hidden-class="d-none">
-  <div class="list-group-item list-group-item-action activecard text-center" data-action="click->reveal#toggle">
+  <div class="list-group-item list-group-item-action activecard text-center color-text text-color1" data-action="click->reveal#toggle">
     Mes étapes
   </div>
-    <div class="list-group-item list-group-item-action activecard text-center" data-reveal-target="item">
+    <div class="list-group-item list-group-item-action activecard text-center color-text text-color1" data-reveal-target="item">
       <%= link_to "Créer une étape", new_step_path, class: 'step-card-link bcc' %>
     </div>
     <% @my_steps.each do |step| %>
-      <div class="list-group-item list-group-item-action activecard text-center" data-reveal-target="item">
+      <div class="list-group-item list-group-item-action activecard text-center color-text text-color1" data-reveal-target="item">
         <%= render "composents/step_card", step: step %>
       </div>
     <% end %>

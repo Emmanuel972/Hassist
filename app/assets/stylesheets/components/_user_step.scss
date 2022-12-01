@@ -84,3 +84,31 @@ i.fa-solid.fa-plus:hover {
 .scrollable img {
   width: 100%;
 }
+
+.color-text:active {
+  background-color: #f4f4f4!important;
+  border-right: 6px solid #3817f6;
+}
+
+.color-text:hover {
+  background-color: #f4f4f4!important;
+  border-right: 6px solid #070dc2;
+}
+
+.list-group-item.list-group-item-action.activecard.text-center.color-text:hover {
+  border-right: 6px solid #7251c5;
+}
+
+.text-color1 {
+  background-color:#ece9f1!important;
+}
+
+.text-color2 {
+  background-color:#e1edf4!important;
+}
+
+.fa-plus::before {
+  content: "\2b";
+  color: rgb(140, 23, 23);
+  font-size: 40px;
+}

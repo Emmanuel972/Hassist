@@ -1,6 +1,45 @@
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>À propos de nous</h6>
+            <p class="text-justify">Hassist.me est une application crée dans le but d'aider les parents ayant un enfant atteint du trouble du spectre de l'autisme afin ne pas perdre de temps dans les démarches administratives.</p>
+          </div>
+          <div class="col-xs-2 col-md-3">
+            <h6>LIENS RAPIDES</h6>
+            <ul class="footer-links">
+              <li><a href="mailto:nathanagn@gmail.com">Contact Us</a></li>
+              <li><a href="#">Contribute</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+            <a href="mailto:nathanagn@gmail.com"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:nathanagn@gmail.com"><i class="fab fa-facebook"></i></a>
+            <a href="mailto:nathanagn@gmail.com"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:nathanagn@gmail.com"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:nathanagn@gmail.com"><i class="fa-sharp fa-solid fa-envelope"></i></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+
+
+
 .site-footer
 {
-  background-color:#dad9eb;
+  background-color:#cdcbe7;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
@@ -8,7 +47,7 @@
 }
 .site-footer hr
 {
-  border-top-color:rgb(171, 169, 169);
+  border-top-color:#bbb;
   opacity:0.5
 }
 .site-footer hr.small
@@ -111,7 +150,7 @@
 }
 .social-icons a{
   background-color:#0794db;
-  background-color:#585858;
+  color:#585858;
   font-size:16px;
   display:inline-block;
   line-height:44px;
@@ -179,16 +218,3 @@
   color: #1660ae;
 }
 
-.col-md-6  {
-  margin-right: 200px;
-}
-
-.site-footer .social-icons a {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  margin-left: 10px;
-  margin-right: 0;
-  border-radius: 100%;
-  background-color: #888a91;
-}
