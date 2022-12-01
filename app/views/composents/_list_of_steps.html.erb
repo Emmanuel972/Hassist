@@ -8,12 +8,14 @@
   <% end %>
 </div>
 <div class="list-group" data-controller="reveal" data-reveal-hidden-class="d-none">
-  <div class="list-group-item list-group-item-action activecard text-center color-text text-color1" data-action="click->reveal#toggle">
+  <div class="list-group-item step-card-link list-group-item-action activecard text-center bcc color-text text-color1" data-action="click->reveal#toggle">
     Mes étapes
   </div>
-    <div class="list-group-item list-group-item-action activecard text-center d-none color-text text-color1" data-reveal-target="item">
-      <%= link_to "Créer une étape", new_step_path, class: 'step-card-link bcc' %>
-    </div>
+    <%= link_to new_step_path do %>
+      <div class="list-group-item list-group-item-action activecard text-center bcc step-card-link d-none color-text text-color1" data-reveal-target="item">
+        Créer une étape
+      </div>
+    <% end %>
     <% @my_steps.each do |step| %>
       <%= link_to step_path(step) do %>
         <div class="list-group-item list-group-item-action activecard text-center step-card-link bcc d-none color-text text-color1" data-reveal-target="item">
