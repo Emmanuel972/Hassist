@@ -14,13 +14,13 @@ class Step < ApplicationRecord
     case name
     when "MDPH"
       return [{ name: "Demande à la MDPH",
-                url: "https://asset.cloudinary.com/daixhq5r5/1af939d44835060c05f0adf0fa203eda",
+                url: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669947333/production/demande_%C3%A0_la_MDPH_f6pmsj.pdf",
                 key: "demande_à_la_MDPH_f6pmsj" },
               { name: "Certificat médical",
-                url: "https://asset.cloudinary.com/daixhq5r5/e7bd8fe204a2ea7f24769f1b5ebb62f7",
+                url: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669947260/production/certificat_m%C3%A9dical_syzwo0.pdf",
                 key: "certificat_médical_syzwo0" },
               { name: "Geva-sco",
-                url: "https://asset.cloudinary.com/daixhq5r5/fd52db4562504c861c118389ffb64694",
+                url: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669947191/production/Geva-sco_sjyqul.pdf",
                 key: "Geva-sco_sjyqul" }]
     end
   end

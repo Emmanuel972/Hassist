@@ -48,7 +48,7 @@
                 <iframe src=<%= "https://docs.google.com/gview?url=#{file[:url]}&embedded=true" %>></iframe>
               </div>
               <div class='card-body'>
-                <%= link_to cl_image_path(file[:key]), target: "_blank" do %>
+                <%= link_to cl_image_path(file[:url]), target: "_blank" do %>
                   <%= file[:name] %>
                 <% end %>
               </div>
