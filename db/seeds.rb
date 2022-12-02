@@ -6,9 +6,9 @@ User.destroy_all
 
 puts "Creating users..."
 
-emmanuel = {first_name: "Emmanuel", last_name: "CLAIRE", email:"c.l.e.972@gmail.com", password: "33845972", photo: "https://res.cloudinary.com/daixhq5r5/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1669751712/development/2zdm4bfojob5mo9oknfny8isnjh2.jpg"}
-teacher = {first_name: "teacher", last_name: "LEWAGON", email:"test@test.com", password: "123456", photo: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" }
-random = {first_name: "User", last_name: "NEW", email:"random@test.com", password: "123456", photo: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669917164/development/neblife_c309b25d8c30c03e5caafb00d424395c_cropped_lm1tsz.png"}
+emmanuel = { first_name: "Emmanuel", last_name: "CLAIRE", email: "c.l.e.972@gmail.com", password: "33845972", photo: "https://res.cloudinary.com/daixhq5r5/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1669751712/development/2zdm4bfojob5mo9oknfny8isnjh2.jpg" }
+teacher = { first_name: "Lucie", last_name: "JESOPH", email: "test@test.com", password: "123456", photo: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669946229/development/1669942407282_lxnb8j.jpg" }
+random = { first_name: "User", last_name: "NEW", email: "random@test.com", password: "123456", photo: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669917164/development/neblife_c309b25d8c30c03e5caafb00d424395c_cropped_lm1tsz.png" }
 
 [emmanuel, teacher, random].each do |attributes|
   user = User.new(attributes)
