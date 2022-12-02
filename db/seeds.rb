@@ -27,7 +27,7 @@ professionnels_de_la_petite_enfance = { name: "Professionnels De La Petite Enfan
 </p>
 ", picture: "https://res.cloudinary.com/daixhq5r5/image/upload/v1669821795/personnel_de_la_petite_enfance_2_drwygu.jpg" }
 camps = { name: "CAMPS", content: "<p class='p-3'>
-  le CAMPS(Centre Medico Social Précose) a pour mission le dépistage, le diagnostique, le traitement et la réeducation des jeunes enfants entre 0 et 6ans en situation d'handicap avant leur rentrée a l'école.
+  le CAMPS (Centre Medico Social Précoce) a pour mission le dépistage, le diagnostique, le traitement et la réeducation des jeunes enfants entre 0 et 6ans en situation d'handicap avant leur rentrée a l'école.
 </p>
 <p class='p-3'>
 
