@@ -59,7 +59,7 @@
     </div>
   </div>
   <div class="step-card-right user-steps-container rounded-4" data-controller="popover">
-    <%= link_to step_user_steps_path(@step), data: { action: "mouseenter->popover#show mouseleave->popover#hide", turbo_method: :post, turbo_confirm: "Voulez créer un sauvegarde pour #{@step.name}?" }, class: 'card-user-step card-user-step d-flex justify-content-center align-items-center' do %>
+    <%= link_to step_user_steps_path(@step), title: "Créer une sauvegarde", data: { toggle: "tooltip", turbo_method: :post, turbo_confirm: "Vous êtes sur le point de créer une sauvegarde pour #{@step.name}. Continuer ?" }, class: 'link-card card-user-step d-flex justify-content-center align-items-center' do %>
       <i class="fa-solid fa-plus"></i>
     <% end %>
     <template data-popover-target="content">
@@ -72,3 +72,4 @@
     <% end %>
   </div>
 </div>
+
